@@ -58,6 +58,18 @@
 
 ![游戏演示](examples/ai_teammate_gui_refactored_final.gif)
 
+### AI行为研究应用 - FSM vs 行为树 vs Utility AI ⭐⭐⭐
+用于研究和对比三种不同AI决策系统的游戏演示：
+- 🤖 **有限状态机(FSM)** - 硬编码状态转换，易于理解和调试
+- 🌲 **行为树(Behavior Tree)** - 树状结构组织，模块化设计，易于扩展
+- 🎯 **Utility AI** - 基于连续评分函数，平滑行为过渡，灵活权衡
+- 🎮 图形化游戏界面（900x700窗口）
+- 🗺️ 网格地图系统，包含障碍物
+- 🛡️ A*寻路算法和障碍物避开系统
+- ⚔️ 近战战斗系统
+- 📊 实时对比三种AI的行为差异
+- 🔧 三种NPC分别使用不同的决策系统（FSM红色、行为树蓝色、Utility绿色）
+
 ## 安装
 
 ### 基础安装依赖
@@ -122,6 +134,11 @@ python examples/ai_teammate_gui_enhanced.py  # 完整增强版（推荐）
 ### AI队友图形化游戏 - 重构最终版 ⭐⭐
 ```bash
 python examples/ai_teammate_gui_refactored_final.py  # 重构最终版（模块化架构）
+```
+
+### AI行为研究应用 ⭐⭐⭐
+```bash
+python examples/ai_behavior_research/main.py  # 三种AI决策系统对比研究
 ```
 
 ### 配置AI行为优先级示例
@@ -205,12 +222,28 @@ BehaviorTreeLab/
 │   │   ├── level_system.py  # 等级系统（重构新增）
 │   │   ├── advanced_enemies.py # 高级敌人（重构新增）
 │   │   └── game_logic.py   # 核心游戏逻辑（重构新增）
+│   ├── ai_behavior_research/ # AI行为研究应用（FSM vs 行为树 vs Utility AI）⭐⭐⭐
+│   │   ├── README.md        # 研究应用文档
+│   │   ├── __init__.py
+│   │   ├── main.py          # 主入口
+│   │   ├── game.py          # 游戏主逻辑
+│   │   ├── gui.py           # 图形界面
+│   │   ├── config.py        # 配置文件
+│   │   ├── entities.py      # 实体定义
+│   │   ├── fsm_npc.py       # 有限状态机NPC
+│   │   ├── bt_npc.py        # 行为树NPC
+│   │   ├── utility_ai.py    # Utility AI
+│   │   ├── combat.py        # 战斗系统
+│   │   ├── movement.py      # 移动系统
+│   │   ├── pathfinding.py   # 寻路系统
+│   │   └── grid_map.py      # 网格地图
 │   ├── simple_example.py     # 基础使用示例
 │   ├── test_ai_teammate.py  # AI队友功能测试
 │   ├── ai_teammate_demo.py  # AI队友交互式演示
 │   ├── ai_teammate_gui.py  # AI队友图形化游戏（基础版）
 │   ├── ai_teammate_gui_enhanced.py  # AI队友图形化游戏（增强版）⭐
 │   ├── ai_teammate_gui_refactored_final.py  # AI队友图形化游戏（重构最终版）⭐⭐
+│   ├── ai_teammate_gui_refactored_final.gif  # 重构最终版演示视频
 │   ├── config_example.py    # AI配置示例
 │   └── scores.json        # 分数历史存档
 ├── tests/
