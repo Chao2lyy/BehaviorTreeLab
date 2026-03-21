@@ -42,6 +42,22 @@
 - 🤖 可配置的AI行为优先级
 - 🎨 实时状态面板和操作说明
 
+### AI队友行为树游戏 - 重构最终版 ⭐⭐
+**完全重构的模块化架构版本，包含：
+- 🎮 图形化游戏界面（1300x700窗口）
+- 🧩 完全模块化的代码架构
+- 🎯 多种敌人类型（战士、法师、枪手、将军、指挥官）
+- 📈 难度递增系统（敌人频率、数量、强度随时间增加）
+- 🎯 技能系统（子弹技能、飞镖技能）
+- 📊 等级系统（经验值、技能升级）
+- 💰 不同敌人不同奖励（分数和经验随时间递增）
+- 🤝 经验值共享机制（玩家和AI队友经验完全共享）
+- ❤️ 血包共享机制（任一角色拾取，两人同时加血）
+- 🏆 分数系统和历史排行榜
+- 🎨 实时状态面板和操作说明
+
+![游戏演示](examples/ai_teammate_gui_refactored_final.gif)
+
 ## 安装
 
 ### 基础安装依赖
@@ -101,6 +117,11 @@ python examples/ai_teammate_gui.py         # Pygame图形化界面
 ### AI队友图形化游戏 - 增强版 ⭐
 ```bash
 python examples/ai_teammate_gui_enhanced.py  # 完整增强版（推荐）
+```
+
+### AI队友图形化游戏 - 重构最终版 ⭐⭐
+```bash
+python examples/ai_teammate_gui_refactored_final.py  # 重构最终版（模块化架构）
 ```
 
 ### 配置AI行为优先级示例
@@ -178,12 +199,18 @@ BehaviorTreeLab/
 │   │   ├── ai_behavior.py    # AI行为树实现
 │   │   ├── config.py        # 游戏配置类
 │   │   ├── score_manager.py # 分数管理器
-│   │   └── simulator.py     # 战斗场景模拟器
+│   │   ├── simulator.py     # 战斗场景模拟器
+│   │   ├── skills.py        # 技能系统（重构新增）
+│   │   ├── game_items.py    # 游戏物品（重构新增）
+│   │   ├── level_system.py  # 等级系统（重构新增）
+│   │   ├── advanced_enemies.py # 高级敌人（重构新增）
+│   │   └── game_logic.py   # 核心游戏逻辑（重构新增）
 │   ├── simple_example.py     # 基础使用示例
 │   ├── test_ai_teammate.py  # AI队友功能测试
 │   ├── ai_teammate_demo.py  # AI队友交互式演示
 │   ├── ai_teammate_gui.py  # AI队友图形化游戏（基础版）
 │   ├── ai_teammate_gui_enhanced.py  # AI队友图形化游戏（增强版）⭐
+│   ├── ai_teammate_gui_refactored_final.py  # AI队友图形化游戏（重构最终版）⭐⭐
 │   ├── config_example.py    # AI配置示例
 │   └── scores.json        # 分数历史存档
 ├── tests/
