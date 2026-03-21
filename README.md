@@ -248,8 +248,6 @@ BehaviorTreeLab/
 │   └── scores.json        # 分数历史存档
 ├── tests/
 │   └── test_behavior_tree.py # 核心框架单元测试
-└── .trae/
-    └── specs/              # 规划文档
 ```
 
 ## 许可证
