@@ -33,49 +33,40 @@
 - ASCII可视化战斗场景模拟器
 
 ### AI队友行为树游戏 - 增强版
-**完整的Pygame图形化游戏，包含：
-- 🎮 图形化游戏界面（1100x700窗口）
-- 🎯 敌人随机出生系统
-- ❤️ 血包系统（可拾取回复血量
+完整的Pygame图形化游戏，包含：
+- 🎮 图形化游戏界面
+- ❤️ 血包系统（可拾取回复血量）
 - 🏆 分数系统和历史排行榜
-- ⚙️ 完整的参数配置系统
+- ⚙️ 参数配置
 - 🤖 可配置的AI行为优先级
-- 🎨 实时状态面板和操作说明
 
 ### AI队友行为树游戏 - 重构最终版 ⭐⭐
-**完全重构的模块化架构版本，包含：
-- 🎮 图形化游戏界面（1300x700窗口）
-- 🧩 完全模块化的代码架构
+完全重构的模块化架构版本，包含：
+- 🎮 图形化游戏界面
 - 🎯 多种敌人类型（战士、法师、枪手、将军、指挥官）
-- 📈 难度递增系统（敌人频率、数量、强度随时间增加）
+- 📈 难度递增（敌人频率、数量、强度随时间增加）
 - 🎯 技能系统（子弹技能、飞镖技能）
 - 📊 等级系统（经验值、技能升级）
 - 💰 不同敌人不同奖励（分数和经验随时间递增）
-- 🤝 经验值共享机制（玩家和AI队友经验完全共享）
-- ❤️ 血包共享机制（任一角色拾取，两人同时加血）
 - 🏆 分数系统和历史排行榜
-- 🎨 实时状态面板和操作说明
 
 ![游戏演示](examples/ai_teammate_gui_refactored_final.gif)
 
 ### AI行为研究应用 - FSM vs 行为树 vs Utility AI ⭐⭐⭐
 用于研究和对比三种不同AI决策系统的游戏演示：
-- 🤖 **有限状态机(FSM)** - 硬编码状态转换，易于理解和调试
-- 🌲 **行为树(Behavior Tree)** - 树状结构组织，模块化设计，易于扩展
-- 🎯 **Utility AI** - 基于连续评分函数，平滑行为过渡，灵活权衡
+- 🤖 **有限状态机(FSM)** 
+- 🌲 **行为树(Behavior Tree)** 
+- 🎯 **Utility AI** 
 - 🎮 图形化游戏界面（900x700窗口）
 - 🗺️ 网格地图系统，包含障碍物
-- 🛡️ A*寻路算法和障碍物避开系统
-- ⚔️ 近战战斗系统
-- 📊 实时对比三种AI的行为差异
+- 🛡️ A*寻路算法和障碍物避开
+- 📊 对比三种AI的行为差异
 - 🔧 三种NPC分别使用不同的决策系统（FSM红色、行为树蓝色、Utility绿色）
 
 ## 安装
 
 ### 基础安装依赖
 ```bash
-# 核心框架无需额外依赖，Python 3.6+ 即可
-# 运行增强版游戏需要安装pygame
 pip install pygame
 ```
 
@@ -179,7 +170,6 @@ python tests/test_behavior_tree.py -v
 
 ### 基础操作
 - **WASD / 方向键**: 移动玩家
-- **空格键**: 玩家攻击
 - **Start Game**: 开始游戏
 - **Pause/Resume**: 暂停/继续游戏
 - **Restart**: 重新开始游戏
@@ -249,41 +239,3 @@ BehaviorTreeLab/
 ├── tests/
 │   └── test_behavior_tree.py # 核心框架单元测试
 ```
-
-## 许可证
-
-本项目采用 **MIT License** 许可证。
-
-```
-MIT License
-
-Copyright (c) 2026 BehaviorTreeLab
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
-完整许可证文本请查看项目根目录下的 [LICENSE](LICENSE) 文件。
-
-## 未来计划
-- [ ] 添加更多行为树节点类型
-- [ ] 添加行为树可视化编辑器
-- [ ] 支持行为树导入/导出功能
-- [ ] 添加更多AI行为示例
-- [ ] 性能优化
-- [ ] 文档完善
